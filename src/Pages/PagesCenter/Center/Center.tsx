@@ -8,13 +8,16 @@ function Center() {
   const games = useAppSelector((state: RootState) => state.ImgeSlice);
   return (
 
-     <div>
-      
-      <img src={games.image? games.image :`/asset/imagesrc.jpeg`} style={{width:'650px',height:'450px'}}/>
-     </div>
+    <div>
+      <img src={games.image ? games.image : `/asset/imagesrc.jpeg`} style={{
+        maxWidth: '100%',
+        height: '100%',
+        width: '100%',
+        objectFit: 'cover'
+      }} />
+    </div>
 
-      
-    
+
   )
 }
 
