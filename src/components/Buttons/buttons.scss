@@ -1,0 +1,47 @@
+// Define variables for colors and sizes
+$default-bg-color: #282c34;
+$normal-bg-color: #747e91;
+$hover-bg-color: #747e91;
+$text-color: white;
+$padding-vertical: 0.5rem; // Ajusta el relleno vertical según el tamaño del texto
+$padding-horizontal: 1rem; // Ajusta el relleno horizontal según el tamaño del texto
+$border-radius: 25px; // Ajusta el radio de los bordes redondeados
+
+// Style for the square class
+.square {
+  
+  display: inline-flex;
+  padding: $padding-vertical $padding-horizontal;
+  background-color: $default-bg-color;
+  border-radius: $border-radius;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.3s ease;
+  text-align: center;
+  cursor: pointer;
+  color: $text-color;
+  height: 30px; // Ajusta la altura deseada
+
+
+
+
+  
+  &:hover {
+    background-color: $hover-bg-color;
+    color: $text-color; // Asegura que el color del texto siga siendo legible
+  }
+
+
+
+  
+  
+
+    // Nested hover style
+    
+  }
+
+
+
+ 
+ 
+

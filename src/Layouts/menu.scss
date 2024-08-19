@@ -1,0 +1,103 @@
+// Define variables for colors
+$background: global-variable-exists($name: 'backgroundColor');
+$textcolor: variable-exists($name: 'color');
+$overlay: variable-exists($name: 'overlayColor'); // Default overlay color
+$hoverTextColor: violet; // Color for hover state
+
+.banner_container {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    /* Espacio entre los elementos */
+    width: 100%;
+    flex-direction: row;
+    /* Disposición en fila por defecto */
+    align-items: center;
+    /* Centra verticalmente el contenido del contenedor */
+
+    .banner {
+        display: flex;
+        justify-content: start;
+        /* Alinea los enlaces al principio */
+        align-items: center;
+        width: 100%;
+        /* Centra los enlaces verticalmente */
+        background-color: $background;
+        padding: 10px;
+        height: 60px;
+    }
+
+    .banner-link {
+        color: $textcolor !important;
+        text-decoration: none;
+        margin: 0 15px;
+        /* Espaciado entre los enlaces */
+        font-size: 16px;
+        transition: color 0.3s ease;
+    }
+
+    .banner-link:hover {
+        color: $hoverTextColor !important;
+    }
+
+
+    .banner-link.hover-violet:hover {
+        color: rgba(128, 0, 128, 0.5); // Color for hover when background is white
+    }
+    .banner-link.hover-orange:hover {
+        color: orange !important; // Color for hover when background is white
+    }
+}
+
+.logo_Web {
+    display: flex;
+    justify-content: center;
+    /* Centra el contenido del logo horizontalmente */
+    align-items: center;
+    /* Centra el contenido del logo verticalmente */
+    padding: 20px;
+    flex-grow: 1;
+    /* Permite que el logo se expanda para llenar el espacio disponible */
+}
+
+.logo_Web h3 {
+    font-size: 25px;
+    font-weight: bold;
+    color: $textcolor;
+    margin: 0;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+.sidebuttons {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    /* Centra verticalmente los botones en el contenedor */
+    gap: 10px;
+    /* Reduce el espacio entre los botones */
+    padding-right: 2rem;
+    /* Añade espacio al lado derecho del contenedor */
+}
+
+/* Estilos para pantallas pequeñas */
+@media (max-width: 768px) {
+    .banner_container {
+        flex-direction: column;
+        /* Cambia a disposición en columna en pantallas pequeñas */
+        align-items: center;
+        /* Centra los elementos horizontalmente en la columna */
+    }
+
+    .banner,
+    .sidebuttons {
+        width: 100%;
+        /* Asegura que los elementos ocupen todo el ancho disponible */
+        justify-content: center;
+        /* Centra los elementos horizontalmente */
+    }
+
+    .banner-link {
+        margin: 10px 0;
+        /* Ajusta el margen entre los enlaces en columna */
+    }
+}

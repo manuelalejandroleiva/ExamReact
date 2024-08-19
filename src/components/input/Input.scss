@@ -1,0 +1,46 @@
+Verify
+
+
+.input {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  height: 40px;
+  padding: 10px;
+  border: 2px solid #ccc;
+  border-radius: 10px;
+  background-color: #fff;
+
+  &:focus {
+    border-color: #337ab7;
+    box-shadow: 0 0 10px rgba(51, 122, 183, 0.5);
+  }
+
+  &.has-error {
+    border-color: #dc3545;
+    box-shadow: 0 0 10px rgba(220, 53, 69, 0.5);
+  }
+
+  input {
+    flex: 1;
+    height: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 10px;
+    font-size: 16px;
+
+    &:focus {
+      outline: none;
+      box-shadow: 0 0 10px rgba(51, 122, 183, 0.5);
+    }
+  }
+
+  .left-adornment {
+    margin-right: 10px;
+  }
+
+  .right-adornment {
+    margin-left: 10px;
+  }
+}

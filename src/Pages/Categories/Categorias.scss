@@ -1,0 +1,94 @@
+
+.categories_list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    width: 100%;
+    padding: 0 20px;
+    box-sizing: border-box;
+    color: variable-exists($name: 'color');
+  }
+  
+  /* Media query para pantalla móvil */
+  @media only screen and (max-width: 768px) {
+    .categories_list {
+      flex-direction: column; /* Cambia la dirección de la lista a columna */
+      align-items: center; /* Centra los elementos verticalmente */
+      justify-content: space-between;
+    }
+    .categories_list > * {
+      width: 100%; /* Establece el ancho de cada elemento a 100% */
+      margin-bottom: 20px; /* Agrega un margen inferior entre elementos */
+    }
+  }
+
+.categories {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #4a4e56; // Color de fondo base
+    height: 150px;
+    width: 350px;
+    margin: 10px;
+    padding: 0 20px;
+    border-radius: 6px;
+    box-sizing: border-box;
+    font-size: 1.2em;
+    overflow: hidden;
+}
+
+.category-content {
+    position: relative;
+    z-index: 2; // Asegura que el contenido esté por encima del color violeta
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.color_violet{
+    position: absolute;
+    top: 4;
+    left: 3;
+
+    width: 350px;
+    height: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(128, 0, 128, 0.5); // Color violeta con opacidad
+    opacity: 0;
+    z-index: -1;
+}
+
+.category-image {
+    position: absolute;
+    top: 4;
+    left: 3;
+
+    width: 350px;
+    height: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(128, 0, 128, 0.5); // Color violeta con opacidad
+    z-index: -2; // Coloca el color violeta sobre la imagen
+    opacity: 0; // Inicialmente oculto
+    transition: opacity 0.3s ease-in-out;
+}
+
+.category-image img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    background-color: rgba(128, 0, 128, 0.5); //
+    border-radius: 6px;
+    z-index: 3; // Asegura que la imagen esté detrás del color violeta
+}
+
+.categories:hover .category-image {
+    opacity: 1; // Muestra el color violeta al pasar el ratón por encima
+}

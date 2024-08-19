@@ -1,0 +1,54 @@
+$background_color: global-variable-exists($name: 'background');
+$color: global-variable-exists($name: 'color');
+
+
+
+
+.container {
+  display: flex;
+  justify-content: center;
+  background: $background_color;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  font-size: 18px; /* Aumenta el tamaño de la fuente */
+  line-height: 24px; /* Ajusta la altura de línea */
+  margin-bottom: 20px; /* Agrega un poco de espaciado entre párrafos */
+}
+
+.button-row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100%;
+  gap: 4px;
+  font-size: 18px; /* Aumenta el tamaño de la fuente */
+  line-height: 24px; /* Ajusta la altura de línea */
+}
+
+.button-row button {
+  border-radius: 4px;
+  transition: border-radius 0.3s ease, box-shadow 0.3s ease;
+  height: 50px;
+  padding: 0 20px;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px; /* Aumenta el tamaño de la fuente */
+  line-height: 24px; /* Ajusta la altura de línea */
+}
+
+.violet {
+  color: #7131d2;
+  font-weight: bold;
+  font-size: 20px; /* Aumenta el tamaño de la fuente */
+}
+
+.orange {
+  color: orange;
+  font-weight: bold;
+  font-size: 20px; /* Aumenta el tamaño de la fuente */
+}

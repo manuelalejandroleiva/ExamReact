@@ -1,0 +1,83 @@
+/* Contenedor principal */
+.container_rightrow {
+    display: flex; /* Usa flexbox para alinear los botones en una fila */
+    flex-direction: row; /* Asegura que los botones estén en una fila */
+    width: 100%; /* Usa todo el ancho disponible del contenedor */
+    padding: 0; /* Elimina el relleno del contenedor */
+    margin: 0; /* Elimina el margen del contenedor */
+    gap: 0; /* Elimina el espacio entre los botones */
+  }
+  
+  /* Estilo para los botones */
+  .container_rightrow button {
+    flex: 1; /* Asegura que los botones ocupen el mismo ancho */
+    border: none; /* Elimina el borde del botón */
+    background: none; /* Elimina el fondo por defecto del botón */
+    cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
+    display: flex; /* Usa flexbox dentro del botón para centrar el contenido */
+    align-items: center; /* Centra verticalmente el contenido del botón */
+    justify-content: center; /* Centra horizontalmente el contenido del botón */
+    padding: 0; /* Elimina el relleno del botón */
+    margin: 0; /* Elimina el margen del botón */
+    box-sizing: border-box; /* Asegura que el ancho del botón incluya el relleno y el borde */
+  }
+  
+  .text-semiBold {
+    font-weight: 600; /* Asegura que el texto tenga un peso de fuente semi-negrita */
+  }
+  
+  .bg-white {
+    background-color: #fff; /* Fondo blanco para el botón activo */
+  }
+  
+  .text-primary {
+    color: #007bff; /* Color del texto para el botón activo */
+  }
+  
+  .text-dark-gray {
+    color: #6c757d; /* Color del texto para el botón inactivo */
+  }
+  
+  .shadow-md {
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra mediana para el botón activo */
+  }
+
+
+  .button-row {
+    display: flex;
+    justify-content: center; /* Centra los elementos horizontalmente */
+    align-items: center; /* Centra los elementos verticalmente */
+    height: 100vh; /* Usa el 100% de la altura del viewport */
+    width: 100%;
+    
+  }
+  
+  .button-row button {
+    border-radius: 4px; /* Redondeado inicial */
+    transition: border-radius 0.3s ease, box-shadow 0.3s ease; /* Transición suave */
+    height: 15 px; /* Altura fija del botón */
+    padding: 0 20px; /* Padding horizontal */
+    border: none; /* Sin borde */
+    cursor: pointer; /* Cursor de mano */
+    display: flex; /* Usa flexbox para centrar el contenido verticalmente */
+    align-items: center; /* Centra verticalmente el contenido dentro del botón */
+    justify-content: center; /* Centra horizontalmente el contenido dentro del botón */
+  }
+  
+  .button-row button:hover {
+    border-radius: 5px; /* Más redondeado al pasar el ratón */
+  }
+  
+  .button-row.black-background button {
+    background: #343a3f; /* Fondo cuando el fondo de la fila es negro */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); /* Sombra del botón */
+    color: white; /* Color del texto en el botón */
+  }
+  
+  .button-row.white-background button {
+    background: white; /* Fondo cuando el fondo de la fila es blanco */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); /* Sombra del botón */
+    color: black; /* Color del texto en el botón */
+  }
+
+

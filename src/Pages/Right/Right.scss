@@ -1,0 +1,134 @@
+// Define variables for colors
+$background-color: variable-exists($name: 'background'); // Gris claro para el fondo del contenedor
+$text-color: variable-exists($name: 'color'); // Gris oscuro para el texto
+$color-principal: #007bff; // Azul para el fondo del botón
+$color-hover: #0056b3; // Azul oscuro para el fondo del botón al pasar el ratón
+$color-fondo: variable-exists($name: 'background'); 
+$color-borde: #ddd; // Gris claro para el borde de los elementos de la lista
+$color-texto: #333; // Gris oscuro para el texto en los elementos de la lista
+$ancho-boton: 24px; // Ancho del botón "+"
+$alto-boton: 24px; // Alto del botón "+"
+$radio-boton: 50%; // Radio del borde del botón "+" para hacerlo circular
+$sombra: 0 2px 4px rgba(0, 0, 0, 0.1); // Sombra para los elementos de la lista
+
+// Contenedor principal
+.container_right {
+  display: flex;
+  justify-content: center;
+  background: $background_color;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  font-size: 18px; /* Aumenta el tamaño de la fuente */
+  line-height: 24px; /* Ajusta la altura de línea */
+  margin-bottom: 20px; /* Agrega un poco de espaciado entre párrafos */
+  // Ajustes para pantallas pequeñas
+  @media (max-width: 768px) {
+    padding: 10px; // Añade un poco de padding para evitar que el contenido quede pegado a los bordes
+    // Ajusta el contenedor para pantallas pequeñas
+  }
+}
+
+// Ajustes para la lista y sus elementos
+.lista-con-boton {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  width: 100%; // Ajusta el ancho de la lista para que ocupe el 100% del contenedor
+
+  // Estilos para cada elemento de la lista
+  li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: $color-fondo;
+    border-radius: 4px;
+    margin-bottom: 10px;
+    padding: 10px;
+    box-shadow: $sombra;
+    width: 100%; // Asegura que cada elemento de la lista ocupe el 100% del ancho del contenedor
+    box-sizing: border-box; // Asegura que el padding y el border no afecten el ancho total
+  }
+
+  // Estilos para el texto del item
+  .item-texto {
+    font-size: 16px;
+    color: $color-texto;
+  }
+
+  // Estilos para el botón "+"
+  .boton-plus {
+    background-color: $color-principal;
+    color: white;
+    border: none;
+    border-radius: $radio-boton;
+    width: $ancho-boton;
+    height: $alto-boton;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+
+    // Estilo para el botón "+" al pasar el mouse por encima
+    &:hover {
+      background-color: $color-hover;
+    }
+  }
+}
+
+// Ajustes para los botones en la fila
+.button-row {
+  display: flex;
+  justify-content: center; // Centra los botones horizontalmente
+  align-items: center; // Centra los botones verticalmente
+  width: 100%; // Usa toda la anchura disponible
+  height: auto; // Permite que la altura se ajuste al contenido
+  gap: 4px; // Espacio entre los botones
+
+  // Ajustes para pantallas pequeñas
+  @media (max-width: 768px) {
+    flex-direction: column; // Organiza los botones en una columna en pantallas pequeñas
+    align-items: center; // Centra los botones horizontalmente
+  }
+}
+
+.button-row button {
+  border-radius: 4px; // Redondeado inicial
+  transition: border-radius 0.3s ease, box-shadow 0.3s ease; // Transición suave
+  height: 50px; // Altura fija del botón
+  padding: 0 20px; // Padding horizontal
+  border: none; // Sin borde
+  cursor: pointer; // Cursor de mano
+  display: flex; // Usa flexbox para centrar el contenido verticalmente
+  align-items: center; // Centra verticalmente el contenido dentro del botón
+  justify-content: center; // Centra horizontalmente el contenido dentro del botón
+  font-size: 16px; // Tamaño de fuente
+}
+
+.button-row button:hover {
+  border-radius: 5px; // Más redondeado al pasar el ratón
+}
+
+.button-row.black-background button {
+  background: #343a3f; // Fondo cuando el fondo de la fila es negro
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); // Sombra del botón
+  color: white; // Color del texto en el botón
+}
+
+.button-row.white-background button {
+  background: white; // Fondo cuando el fondo de la fila es blanco
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); // Sombra del botón
+  color: black; // Color del texto en el botón
+}
+
+
+.choosePlatform{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+}
+
